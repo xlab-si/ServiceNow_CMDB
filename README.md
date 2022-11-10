@@ -25,9 +25,9 @@ Integration of ServiceNow’s CMDB management with ManageIQ
 - Under `Import Datastore Classes (*.zip)`, select `Choose file` and open [zip file](./ServiceNow_CMDB.zip) that contains the datastore classes, then click `Upload`:
 
   - Under `Select domain you wish to import from:`, select `ServiceNow`.
-  - Under `Select namespaces you wish to import from:`, select `Integration` and click `Commit`.
+  - Under `Select namespaces you wish to import from:`, select `Toggle All` and click `Commit`.
   - Under `Select domain you wish to import from:`, select `ManageIQ`.
-  - Under `Select namespaces you wish to import from:`, select `Service -> Retirement` and click `Commit`.
+  - Under `Select namespaces you wish to import from:`, select `Toggle All` and click `Commit`.
 
 - Navigate to `Automation -> Embedded Automate -> Explorer`.
 
