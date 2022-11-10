@@ -45,9 +45,12 @@ to match an existing, running Servicenow Instance.
 - For all the required instances ('create_generic_incident', ... , 'get_snow_assignment_groups', ...) perform the following steps:
 
   - Select `Configuration -> Edit this instance`:
-    - Replace `(snow_server)` value with your Servicenow Instance Host (make sure to leave out the "https://" prefix and any endpoints at the end)
+    - Replace `(snow_server)` value with your Servicenow Instance Host.
     - Replace `(snow_user)` and `(snow_password)` values with your Servicenow's user and password.
     - Replace `(proxy_url)` with your instance's proxy url, or leave blank if there is none.
+
+  **NOTE** values are used in `"https://#{snow_server}/api/now/table/#{table_name}"`, so make sure to leave
+  out the https:// and any endpoints from the `(snow_server)` value.
 
   **NOTE** make sure to select automate instances, as there should be an automate instance and an automate method with the same name.
 
