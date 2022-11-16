@@ -1,0 +1,14 @@
+---
+object_type: instance
+version: 1.0
+object:
+  attributes:
+    display_name: 
+    name: configured_system_provision_finished
+    inherits: 
+    description: 
+    relative_path: System/CommonMethods/StateMachineMethods/configured_system_provision_finished
+  fields:
+  - execute:
+      value: task_finished(object => 'miq_provision_task', message => 'Configured
+        System Provisioned Successfully')

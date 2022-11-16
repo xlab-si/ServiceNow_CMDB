@@ -1,0 +1,13 @@
+---
+object_type: instance
+version: 1.0
+object:
+  attributes:
+    display_name: 
+    name: prereconfigure
+    inherits: 
+    description: prereconfigure
+    relative_path: Cloud/Orchestration/Reconfiguration/StateMachines/Methods/prereconfigure
+  fields:
+  - execute:
+      value: prereconfigure

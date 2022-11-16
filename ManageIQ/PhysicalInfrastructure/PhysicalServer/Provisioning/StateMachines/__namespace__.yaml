@@ -1,0 +1,12 @@
+---
+object_type: namespace
+version: 1.0
+object:
+  attributes:
+    name: StateMachines
+    description: ''
+    display_name: 
+    priority: 
+    enabled: 
+    ancestry: 1/50/51/52
+    relative_path: PhysicalInfrastructure/PhysicalServer/Provisioning/StateMachines

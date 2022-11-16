@@ -1,0 +1,13 @@
+---
+object_type: method
+version: 1.0
+object:
+  attributes:
+    name: refresh_incident_details
+    display_name: 
+    description: 
+    scope: instance
+    language: ruby
+    location: inline
+    relative_path: Integration/ServiceNow/CMDB/refresh_incident_details
+  inputs: []

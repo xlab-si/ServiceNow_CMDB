@@ -1,0 +1,12 @@
+---
+object_type: namespace
+version: 1.0
+object:
+  attributes:
+    name: GenericObject
+    description: 
+    display_name: 
+    priority: 
+    enabled: 
+    ancestry: '1'
+    relative_path: GenericObject

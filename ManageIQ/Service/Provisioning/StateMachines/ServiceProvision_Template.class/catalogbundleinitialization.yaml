@@ -1,0 +1,15 @@
+---
+object_type: instance
+version: 1.0
+object:
+  attributes:
+    display_name: 
+    name: CatalogBundleInitialization
+    inherits: 
+    description: 
+    relative_path: Service/Provisioning/StateMachines/ServiceProvision_Template/CatalogBundleInitialization
+  fields:
+  - pre1:
+      value: "/Service/Provisioning/StateMachines/Methods/DialogParser"
+  - pre2:
+      value: "/Service/Provisioning/StateMachines/Methods/CatalogBundleInitialization"

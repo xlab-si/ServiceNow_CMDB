@@ -1,0 +1,13 @@
+---
+object_type: method
+version: 1.0
+object:
+  attributes:
+    name: vmware_PreProvision
+    display_name: 
+    description: 
+    scope: instance
+    language: ruby
+    location: inline
+    relative_path: Infrastructure/VM/Provisioning/StateMachines/Methods/vmware_PreProvision
+  inputs: []

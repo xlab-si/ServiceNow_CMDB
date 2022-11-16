@@ -1,0 +1,15 @@
+---
+object_type: instance
+version: 1.0
+object:
+  attributes:
+    display_name: 
+    name: MiqProvisionRequest_created
+    inherits: 
+    description: 
+    relative_path: System/Policy/MiqProvisionRequest_created
+  fields:
+  - rel5:
+      value: "/${/#ae_provider_category}/${/#miq_request.resource.ci_type}/Provisioning/Profile/${/#user.normalized_ldap_group}#get_auto_approval_state_machine"
+  - rel6:
+      value: "/${/#ae_provider_category}/${/#miq_request.resource.ci_type}/Provisioning/StateMachines/${/#state_machine}/Default"

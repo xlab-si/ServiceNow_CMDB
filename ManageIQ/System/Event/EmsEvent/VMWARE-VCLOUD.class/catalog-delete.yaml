@@ -1,0 +1,13 @@
+---
+object_type: instance
+version: 1.0
+object:
+  attributes:
+    display_name: 
+    name: catalog-delete
+    inherits: 
+    description: A catalog was deleted.
+    relative_path: System/Event/EmsEvent/VMWARE-VCLOUD/catalog-delete
+  fields:
+  - rel4:
+      value: "/System/event_handlers/event_action_refresh?target=ems"

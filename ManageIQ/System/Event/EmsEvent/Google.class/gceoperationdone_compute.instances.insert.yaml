@@ -1,0 +1,13 @@
+---
+object_type: instance
+version: 1.0
+object:
+  attributes:
+    display_name: 
+    name: GceOperationDone_compute.instances.insert
+    inherits: 
+    description: 
+    relative_path: System/Event/EmsEvent/Google/GceOperationDone_compute.instances.insert
+  fields:
+  - rel4:
+      value: "/System/event_handlers/event_action_refresh?target=ems"

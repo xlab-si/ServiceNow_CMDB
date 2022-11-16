@@ -1,0 +1,12 @@
+---
+object_type: namespace
+version: 1.0
+object:
+  attributes:
+    name: Event
+    description: 
+    display_name: 
+    priority: 
+    enabled: 
+    ancestry: 1/61
+    relative_path: System/Event

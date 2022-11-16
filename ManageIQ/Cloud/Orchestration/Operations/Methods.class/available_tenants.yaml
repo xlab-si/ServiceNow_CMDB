@@ -1,0 +1,13 @@
+---
+object_type: instance
+version: 1.0
+object:
+  attributes:
+    display_name: Available_Tenants
+    name: Available_Tenants
+    inherits: 
+    description: 
+    relative_path: Cloud/Orchestration/Operations/Methods/Available_Tenants
+  fields:
+  - execute:
+      value: Available_Tenants

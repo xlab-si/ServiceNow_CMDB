@@ -1,0 +1,13 @@
+---
+object_type: instance
+version: 1.0
+object:
+  attributes:
+    display_name: 
+    name: validate_quota
+    inherits: 
+    description: 
+    relative_path: System/CommonMethods/QuotaMethods/validate_quota
+  fields:
+  - common_meth:
+      value: validate_quota

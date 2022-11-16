@@ -1,0 +1,13 @@
+---
+object_type: instance
+version: 1.0
+object:
+  attributes:
+    display_name: 
+    name: AUTO_SUSPEND_VM_FINISH_SUCCESS
+    inherits: 
+    description: 
+    relative_path: System/Event/EmsEvent/RHEVM/AUTO_SUSPEND_VM_FINISH_SUCCESS
+  fields:
+  - rel4:
+      value: "/System/event_handlers/event_action_refresh?target=src_vm"

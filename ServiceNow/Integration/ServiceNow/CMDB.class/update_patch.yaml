@@ -1,0 +1,15 @@
+---
+object_type: instance
+version: 1.0
+object:
+  attributes:
+    display_name: 
+    name: update_patch
+    inherits: 
+    description: 
+    relative_path: Integration/ServiceNow/CMDB/update_patch
+  fields:
+  - snow_password:
+      value: v2:{IBbdTuuqrjUsRFt3Q27nic327n9r1HPINkBJKWesRlk=}
+  - execute:
+      value: update_patch

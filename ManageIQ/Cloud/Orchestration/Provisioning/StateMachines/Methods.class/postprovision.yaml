@@ -1,0 +1,13 @@
+---
+object_type: instance
+version: 1.0
+object:
+  attributes:
+    display_name: 
+    name: postprovision
+    inherits: 
+    description: postprovision
+    relative_path: Cloud/Orchestration/Provisioning/StateMachines/Methods/postprovision
+  fields:
+  - execute:
+      value: postprovision
