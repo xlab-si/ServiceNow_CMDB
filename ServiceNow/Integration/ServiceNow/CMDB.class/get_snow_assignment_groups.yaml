@@ -1,0 +1,23 @@
+---
+object_type: instance
+version: 1.0
+object:
+  attributes:
+    display_name: 
+    name: get_snow_assignment_groups
+    inherits: 
+    description: 
+    relative_path: Integration/ServiceNow/CMDB/get_snow_assignment_groups
+  fields:
+  - snow_server:
+      value: testibmimica.service-now.com
+  - snow_user:
+      value: CaaS_Integration_User
+  - snow_password:
+      value: v2:{t/4ac/+gwzgjhsmA3h2aV/vekCajq8pgCPMaF21KKHE=}
+  - table_name:
+      value: sys_user_group
+  - execute:
+      value: get_snow_assignment_groups
+  - proxy_url:
+      value: testibmimica.service-now.com

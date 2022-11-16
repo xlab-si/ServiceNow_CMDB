@@ -1,0 +1,12 @@
+---
+object_type: namespace
+version: 1.0
+object:
+  attributes:
+    name: AnsibleTower
+    description: 
+    display_name: 
+    priority: 
+    enabled: 
+    ancestry: 1/2
+    relative_path: AutomationManagement/AnsibleTower

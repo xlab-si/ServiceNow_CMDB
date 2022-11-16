@@ -1,0 +1,13 @@
+---
+object_type: method
+version: 1.0
+object:
+  attributes:
+    name: create_alert_incident_cop
+    display_name: 
+    description: 
+    scope: instance
+    language: ruby
+    location: inline
+    relative_path: Integration/ServiceNow/CMDB/create_alert_incident_cop
+  inputs: []

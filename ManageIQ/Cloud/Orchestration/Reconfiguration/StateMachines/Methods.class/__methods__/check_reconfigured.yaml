@@ -1,0 +1,13 @@
+---
+object_type: method
+version: 1.0
+object:
+  attributes:
+    name: check_reconfigured
+    display_name: 
+    description: 
+    scope: instance
+    language: ruby
+    location: inline
+    relative_path: Cloud/Orchestration/Reconfiguration/StateMachines/Methods/check_reconfigured
+  inputs: []

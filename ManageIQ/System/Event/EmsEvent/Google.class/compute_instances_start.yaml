@@ -1,0 +1,15 @@
+---
+object_type: instance
+version: 1.0
+object:
+  attributes:
+    display_name: 
+    name: compute_instances_start
+    inherits: 
+    description: 
+    relative_path: System/Event/EmsEvent/Google/compute_instances_start
+  fields:
+  - rel3:
+      value: "/System/event_handlers/event_action_policy?target=src_vm&policy_event=vm_start&param="
+  - rel4:
+      value: "/System/event_handlers/event_action_refresh?target=ems"

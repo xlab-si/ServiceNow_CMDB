@@ -1,0 +1,13 @@
+---
+object_type: instance
+version: 1.0
+object:
+  attributes:
+    display_name: EBS Snapshot Notification
+    name: EBS_Snapshot_Notification
+    inherits: 
+    description: 
+    relative_path: System/Event/EmsEvent/Amazon/EBS_Snapshot_Notification
+  fields:
+  - rel4:
+      value: "/System/event_handlers/refresh"

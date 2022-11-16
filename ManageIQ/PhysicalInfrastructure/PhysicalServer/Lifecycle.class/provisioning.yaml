@@ -1,0 +1,15 @@
+---
+object_type: instance
+version: 1.0
+object:
+  attributes:
+    display_name: 
+    name: Provisioning
+    inherits: 
+    description: 
+    relative_path: PhysicalInfrastructure/PhysicalServer/Lifecycle/Provisioning
+  fields:
+  - Relationship5:
+      value: "/PhysicalInfrastructure/PhysicalServer/Provisioning/Profile/${/#user.normalized_ldap_group}#get_state_machine"
+  - Relationship6:
+      value: "/PhysicalInfrastructure/PhysicalServer/Provisioning/StateMachines/${/#state_machine}/default"

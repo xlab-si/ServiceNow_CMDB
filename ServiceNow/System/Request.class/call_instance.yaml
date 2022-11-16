@@ -1,0 +1,13 @@
+---
+object_type: instance
+version: 1.0
+object:
+  attributes:
+    display_name: 
+    name: Call_Instance
+    inherits: 
+    description: "/${/#namespace}/${/#class}/${/#instance}"
+    relative_path: System/Request/Call_Instance
+  fields:
+  - rel2:
+      value: "/ServiceNow/Integration/ServiceNow/CMDB/${/#action}?state=${/#state}"

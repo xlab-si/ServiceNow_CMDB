@@ -1,0 +1,12 @@
+---
+object_type: namespace
+version: 1.0
+object:
+  attributes:
+    name: StateMachines
+    description: 
+    display_name: 
+    priority: 
+    enabled: 
+    ancestry: 1/9/10/14
+    relative_path: Cloud/Orchestration/Reconfiguration/StateMachines
