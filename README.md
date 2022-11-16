@@ -15,7 +15,7 @@ Integration of ServiceNow’s CMDB management with ManageIQ
 
 ## Prerequisites
 
-- Download the [zip](./ServiceNow_CMDB.zip) containing the datastore classes from this repository.
+- Clone the repository and zip the `ManageIQ` and `ServiceNow` directories.
 - Download the dialogs yaml file from [ServiceNow_Dialogs](https://github.com/xlab-si/ServiceNow_Dialogs).
 - Make sure you have a running instance of ManageIQ (the steps in this document are performed in ManageIQ's UI).
 - Make sure you have a running Servicenow Instance and the required credentials.
@@ -24,7 +24,7 @@ Integration of ServiceNow’s CMDB management with ManageIQ
 
 - Navigate to `Automation -> Embedded Automate -> Import / Export`.
 
-- Under `Import Datastore Classes (*.zip)`, select `Choose file` and open [zip file](./ServiceNow_CMDB.zip) that contains the datastore classes, then click `Upload`:
+- Under `Import Datastore Classes (*.zip)`, select `Choose file` and open the zip file that contains the datastore classes, then click `Upload`:
 
   - Under `Select domain you wish to import from:`, select `ServiceNow`.
   - Under `Select namespaces you wish to import from:`, select `Toggle All` and click `Commit`.
