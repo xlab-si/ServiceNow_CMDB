@@ -147,7 +147,7 @@ if(ci_type == "vm")
     memory      = $evm.object['memory']      || get_virtual_column_value(vm, :mem_cpu)
     vendor      = $evm.object['vendor']      || vm.vendor
     comments	= "#{$evm.root['dialog_create_generic_snow_incident_comments']}"
-    #ci_type = $evm.root['dialog_create_generic_snow_incident_ci_type']
+    ci_type = $evm.root['dialog_create_generic_snow_incident_ci_type']
     ci_name = $evm.root['dialog_create_generic_snow_incident_ci_name']
 
   payload = {
@@ -170,8 +170,8 @@ else
     description = "#{ci_type}:#{name}: #{$evm.root['dialog_create_generic_snow_incident_short_description']}"
     urgency 	= $evm.root['dialog_create_generic_snow_incident_urgency']
     comments	= "#{$evm.root['dialog_create_generic_snow_incident_comments']}"
-    #ci_type = $evm.root['dialog_create_generic_snow_incident_ci_type']
-    #ci_name = $evm.root['dialog_create_generic_snow_incident_ci_name']
+    ci_type = $evm.root['dialog_create_generic_snow_incident_ci_type']
+    ci_name = $evm.root['dialog_create_generic_snow_incident_ci_name']
 
   payload = {
     :virtual           	 => virtual,
