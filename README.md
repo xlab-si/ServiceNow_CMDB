@@ -64,17 +64,19 @@ to match an existing, running Servicenow Instance.
   - Under `Name`, enter "Servicenow\_Incident".
   - Under `Description`, enter  "Servicenow Incident created from Cloudform".
   - Add the following `Attributes`:
-    - ci\_name: "String",
-    - ci\_type: "String",
-    - urgency: "Integer",
-    - short\_description: "String",
-    - number: "String",
-    - comments: "String",
-    - sys\_id: "String",
-    - state: "String",
-    - assignment\_group: "String",
-    - created\_by: "String",
+    - ***ci\_name***: "String",
+    - ***ci\_type***: "String",
+    - ***urgency***: "Integer",
+    - ***short\_description***: "String",
+    - ***number***: "String",
+    - ***comments***: "String",
+    - ***sys\_id***: "String",
+    - ***state***: "String",
+    - ***assignment\_group***: "String",
+    - ***created\_by***: "String",
   - Click `Add`.
+  - ***NOTE***: The object's attributes match the ***Incident***'s attributes, they may be changed, but then the `create.rb` method should be updated accordingly.
+  
 
 ### Creating Add ServiceNow Incident Button
 
@@ -93,12 +95,13 @@ to match an existing, running Servicenow Instance.
   - Check `Display on Button`.
   - Select an `Icon` and `Icon Color`.
   - Under `Dialog` select "Create Context Specific Snow Incident".
+  - ***NOTE***: Make sure `Open Url` is ***unchecked***.
 
   - Under the `Advanced` tab, under `Object Details` enter the following values:
-    - System/Process: "Request",
-    - Message: "create",
-    - Request: "Call\_Instance",
-    - Under `Attribute/Value Pairs`, add the pair: "action": "create".
+    - ***System/Process***: "Request",
+    - ***Message***: "create",
+    - ***Request***: "Call\_Instance",
+    - Under `Attribute/Value Pairs`, add the pair: ***action***: "create".
 
   - Click `Add`.
 
@@ -134,7 +137,7 @@ to match an existing, running Servicenow Instance.
       - Check `Display in Catalog` checkbox.
       - Under `Catalog` select `My Company/Servicenow`.
       - Under `Dialog` select `Create Generic Snow Incident`.
-      - Under `Provisioning Entry Point` select `/ServiceNow/Integratin/ServiceNow/CMDB/create_generic_incident` (check `Include Domain prefix in path`).
+      - Under `Provisioning Entry Point` select `/ServiceNow/Integratin/ServiceNow/CMDB/create` (check `Include Domain prefix in path`).
       - Under `Retirement Entry Point` select `/ManageIQ/Service/Retirement/StateMachines/ServiceRetirement/Default` (check `Include Domain prefix in path`).
     - Do the following in the `Details` section:
       - Under `Long Description` type "Use this catalog item to create servicenowincident. Select the appropriate CI type and enter descriptions appropriately.".
@@ -151,7 +154,7 @@ to match an existing, running Servicenow Instance.
       - Under `Name / Description` type "View and Update Incidents" and "Update Servicenow Incidents.".
       - Check `Display in Catalog` checkbox.
       - Under `Catalog` select `My Company/Servicenow`.
-      - Under `Dialog` select `Create Generic Snow Incident`.
+      - Under `Dialog` select `View and Update Servicenow Incident`.
       - Under `Provisioning Entry Point` select `/ServiceNow/Integratin/ServiceNow/CMDB/update_servicenow_incident` (check `Include Domain prefix in path`).
       - Under `Retirement Entry Point` select `/ManageIQ/Service/Retirement/StateMachines/ServiceRetirement/Default` (check `Include Domain prefix in path`).
     - Do the following in the `Details` section:
