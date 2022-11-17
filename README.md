@@ -16,7 +16,7 @@ Integration of ServiceNow’s CMDB management with ManageIQ
 
 ## Prerequisites
 
-- Clone the repository and zip the `ManageIQ` and `ServiceNow` directories.
+- Clone the repository and zip the `ServiceNow` directoriy.
 - Download the dialogs yaml file from [ServiceNow_Dialogs](https://github.com/xlab-si/ServiceNow_Dialogs).
 - Make sure you have a running instance of ManageIQ (the steps in this document are performed in ManageIQ's UI).
 - Make sure you have a running Servicenow Instance and the required credentials.
@@ -28,8 +28,6 @@ Integration of ServiceNow’s CMDB management with ManageIQ
 - Under `Import Datastore Classes (*.zip)`, select `Choose file` and open the zip file that contains the datastore classes, then click `Upload`:
 
   - Under `Select domain you wish to import from:`, select `ServiceNow`.
-  - Under `Select namespaces you wish to import from:`, select `Toggle All` and click `Commit`.
-  - Under `Select domain you wish to import from:`, select `ManageIQ`.
   - Under `Select namespaces you wish to import from:`, select `Toggle All` and click `Commit`.
 
 - Navigate to `Automation -> Embedded Automate -> Explorer`.
@@ -139,7 +137,7 @@ to match an existing, running Servicenow Instance.
       - Under `Catalog` select `My Company/Servicenow`.
       - Under `Dialog` select `Create Generic Snow Incident`.
       - Under `Provisioning Entry Point` select `/ServiceNow/Integratin/ServiceNow/CMDB/create` (check `Include Domain prefix in path`).
-      - Under `Retirement Entry Point` select `/ManageIQ/Service/Retirement/StateMachines/ServiceRetirement/Default` (check `Include Domain prefix in path`).
+      - Under `Retirement Entry Point` select `/ServiceNow/Service/Retirement/StateMachines/ServiceRetirement/Default` (check `Include Domain prefix in path`).
     - Do the following in the `Details` section:
       - Under `Long Description` type "Use this catalog item to create servicenowincident. Select the appropriate CI type and enter descriptions appropriately.".
     - Click `Add`.
@@ -157,7 +155,7 @@ to match an existing, running Servicenow Instance.
       - Under `Catalog` select `My Company/Servicenow`.
       - Under `Dialog` select `View and Update Servicenow Incident`.
       - Under `Provisioning Entry Point` select `/ServiceNow/Integratin/ServiceNow/CMDB/update_servicenow_incident` (check `Include Domain prefix in path`).
-      - Under `Retirement Entry Point` select `/ManageIQ/Service/Retirement/StateMachines/ServiceRetirement/Default` (check `Include Domain prefix in path`).
+      - Under `Retirement Entry Point` select `/ServiceNow/Service/Retirement/StateMachines/ServiceRetirement/Default` (check `Include Domain prefix in path`).
     - Do the following in the `Details` section:
       - Under `Long Description` type "Use this catalog item to view and update servicenow incident. On Selecting the incident, the latest details from servicenow will be pulled. Update the required details and submit.".
     - Click `Add`.
