@@ -12,6 +12,7 @@ Integration of ServiceNow’s CMDB management with ManageIQ
 6. [Creating Servicenow catalog](#creating-servicenow-catalog)
 7. [Creating ServiceNow Create Incident Service Catalog Item](#creating-servicenow-create-incident-service-catalog-item)
 8. [Creating ServiceNow View and Update Incidents Service Catalog Item](#creating-servicenow-view-and-update-incidents-service-catalog-item)
+9. [Using ServiceNow Catalog Items and Buttons](#using-servicenow-catalog-items-and-buttons)
 
 ## Prerequisites
 
@@ -160,3 +161,26 @@ to match an existing, running Servicenow Instance.
     - Do the following in the `Details` section:
       - Under `Long Description` type "Use this catalog item to view and update servicenow incident. On Selecting the incident, the latest details from servicenow will be pulled. Update the required details and submit.".
     - Click `Add`.
+
+### Using ServiceNow Catalog Items and Buttons
+
+#### Creating Generic Incidents and updating their urgencies from Catalog Items
+
+- Navigate to `Services -> Catalogs`.
+
+- Under `Service Catalogs` select the desired Catalog Item and click `Order`.
+  - Fill the dialog and click `Commit`.
+
+#### Creating Context Specific Incidents with a button.
+
+- Navigate to the Object Type on which the button has been created (Example for ***Provider*** object type: `Compute -> Physical Infrastructure -> Providers`, and select the provider)
+
+- When in the Object Type's section, the `Servicenow` button group should be visible:
+  - Select it and select the `Create Incident` button.
+  - Fill the dialog and click `Commit`.
+
+#### Viewing the Created Incidents as Generic Objects
+
+- Navigate to `Automation -> Embedded Automate -> Generic Objects`.
+- Under `Generic Object Definitions` select the `Servicenow_Incident`.
+- Under `Relationships` the number of instances should be visible, clicking on that number should display them.
