@@ -43,7 +43,7 @@ to match an existing, running Servicenow Instance.
 
 - Navigate to `Automation -> Embedded Automate -> Explorer`.
 
-- For all the required instances ('create\_generic\_incident', ... , 'get\_snow\_assignment\_groups', ...) perform the following steps:
+- For all the [required instances](./ServiceNow/Integration/ServiceNow/CMDB.class/__methods__/) perform the following steps:
 
   - Select `Configuration -> Edit this instance`:
     - Replace `(snow_server)` value with your Servicenow Instance Host.
