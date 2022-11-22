@@ -34,7 +34,7 @@ Integration of ServiceNow’s CMDB management with ManageIQ
 - Navigate to `Automation -> Embedded Automate -> Explorer`.
 
 - Under `Datastore`, select `Datastore -> ServiceNow`:
-  - Select `Configuration -> Edit this domain`:
+  - Select `Configuration -> Edit selected domain`:
     - Check the `Enabled` checkbox and click on `save`.
 
 ### Modifying the imported domain's Instance values
@@ -76,6 +76,14 @@ to match an existing, running Servicenow Instance.
     - created\_by: "String",
   - Click `Add`.
 
+### Importing the dialogs for the ServiceNow datastore methods
+
+- Navigate to `Automation -> Embedded Automate -> Customization`.
+
+- Under `Import`, select the dialogs yaml file and click `Upload`:
+
+  - Under `Import Service Dialogs`, check all the dialogs and click `Commit`.
+
 ### Creating Add ServiceNow Incident Button
 
 - Navigate to `Automation -> Embedded Automate -> Customization`.
@@ -90,6 +98,7 @@ to match an existing, running Servicenow Instance.
 
 - Select the created group and select `Configuration -> Add a new Button`:
   - Under `Name`, enter `Create Servicenow Incident`.
+  - Under `Description`, enter `Create Servicenow Incident Button`.
   - Check `Display on Button`.
   - Select an `Icon` and `Icon Color`.
   - Under `Dialog` select "Create Context Specific Snow Incident".
@@ -102,14 +111,6 @@ to match an existing, running Servicenow Instance.
 
   - Click `Add`.
 
-### Importing the dialogs for the ServiceNow datastore methods
-
-- Navigate to `Automation -> Embedded Automate -> Customization`.
-
-- Under `Import`, select the dialogs yaml file and click `Upload`:
-
-  - Under `Import Service Dialogs`, check all the dialogs and click `Commit`.
-
 ### Creating ServiceNow catalog
 
 - Navigate to `Services -> Catalogs`.
@@ -120,7 +121,7 @@ to match an existing, running Servicenow Instance.
 
   - Under `Name`, type "Servicenow".
   - Under `Description`, type "Catalog for Servicenow Incident Management Operations".
-  - Click `Save`.
+  - Click `Add`.
 
 ### Creating ServiceNow Create Incident service catalog item
 
@@ -134,7 +135,7 @@ to match an existing, running Servicenow Instance.
       - Check `Display in Catalog` checkbox.
       - Under `Catalog` select `My Company/Servicenow`.
       - Under `Dialog` select `Create Generic Snow Incident`.
-      - Under `Provisioning Entry Point` select `/ServiceNow/Integratin/ServiceNow/CMDB/create_generic_incident` (check `Include Domain prefix in path`).
+      - Under `Provisioning Entry Point` select `/ServiceNow/Integration/ServiceNow/CMDB/create_generic_incident` (check `Include Domain prefix in path`).
       - Under `Retirement Entry Point` select `/ManageIQ/Service/Retirement/StateMachines/ServiceRetirement/Default` (check `Include Domain prefix in path`).
     - Do the following in the `Details` section:
       - Under `Long Description` type "Use this catalog item to create servicenowincident. Select the appropriate CI type and enter descriptions appropriately.".
@@ -151,8 +152,8 @@ to match an existing, running Servicenow Instance.
       - Under `Name / Description` type "View and Update Incidents" and "Update Servicenow Incidents.".
       - Check `Display in Catalog` checkbox.
       - Under `Catalog` select `My Company/Servicenow`.
-      - Under `Dialog` select `Create Generic Snow Incident`.
-      - Under `Provisioning Entry Point` select `/ServiceNow/Integratin/ServiceNow/CMDB/update_servicenow_incident` (check `Include Domain prefix in path`).
+      - Under `Dialog` select `View and Update Servicenow Incidents`.
+      - Under `Provisioning Entry Point` select `/ServiceNow/Integration/ServiceNow/CMDB/update_servicenow_incident` (check `Include Domain prefix in path`).
       - Under `Retirement Entry Point` select `/ManageIQ/Service/Retirement/StateMachines/ServiceRetirement/Default` (check `Include Domain prefix in path`).
     - Do the following in the `Details` section:
       - Under `Long Description` type "Use this catalog item to view and update servicenow incident. On Selecting the incident, the latest details from servicenow will be pulled. Update the required details and submit.".
