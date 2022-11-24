@@ -1,0 +1,13 @@
+---
+object_type: method
+version: 1.0
+object:
+  attributes:
+    name: get_snow_assignment_groups
+    display_name: 
+    description: 
+    scope: instance
+    language: ruby
+    location: inline
+    relative_path: Integration/ServiceNow/CMDB/get_snow_assignment_groups
+  inputs: []

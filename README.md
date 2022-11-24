@@ -12,10 +12,11 @@ Integration of ServiceNow’s CMDB management with ManageIQ
 6. [Creating Servicenow catalog](#creating-servicenow-catalog)
 7. [Creating ServiceNow Create Incident Service Catalog Item](#creating-servicenow-create-incident-service-catalog-item)
 8. [Creating ServiceNow View and Update Incidents Service Catalog Item](#creating-servicenow-view-and-update-incidents-service-catalog-item)
+9. [Using ServiceNow Catalog Items and Buttons](#using-servicenow-catalog-items-and-buttons)
 
 ## Prerequisites
 
-- Download the [zip](./ServiceNow_CMDB.zip) containing the datastore classes from this repository.
+- Clone the repository and zip the `ServiceNow` directoriy.
 - Download the dialogs yaml file from [ServiceNow_Dialogs](https://github.com/xlab-si/ServiceNow_Dialogs).
 - Make sure you have a running instance of ManageIQ (the steps in this document are performed in ManageIQ's UI).
 - Make sure you have a running Servicenow Instance and the required credentials.
@@ -24,11 +25,9 @@ Integration of ServiceNow’s CMDB management with ManageIQ
 
 - Navigate to `Automation -> Embedded Automate -> Import / Export`.
 
-- Under `Import Datastore Classes (*.zip)`, select `Choose file` and open [zip file](./ServiceNow_CMDB.zip) that contains the datastore classes, then click `Upload`:
+- Under `Import Datastore Classes (*.zip)`, select `Choose file` and open the zip file that contains the datastore classes, then click `Upload`:
 
   - Under `Select domain you wish to import from:`, select `ServiceNow`.
-  - Under `Select namespaces you wish to import from:`, select `Toggle All` and click `Commit`.
-  - Under `Select domain you wish to import from:`, select `ManageIQ`.
   - Under `Select namespaces you wish to import from:`, select `Toggle All` and click `Commit`.
 
 - Navigate to `Automation -> Embedded Automate -> Explorer`.
@@ -44,7 +43,7 @@ to match an existing, running Servicenow Instance.
 
 - Navigate to `Automation -> Embedded Automate -> Explorer`.
 
-- For all the required instances ('create\_generic\_incident', ... , 'get\_snow\_assignment\_groups', ...) perform the following steps:
+- For all the [required instances](./ServiceNow/Integration/ServiceNow/CMDB.class/__methods__/) perform the following steps:
 
   - Select `Configuration -> Edit this instance`:
     - Replace `(snow_server)` value with your Servicenow Instance Host.
@@ -64,17 +63,19 @@ to match an existing, running Servicenow Instance.
   - Under `Name`, enter "Servicenow\_Incident".
   - Under `Description`, enter  "Servicenow Incident created from Cloudform".
   - Add the following `Attributes`:
-    - ci\_name: "String",
-    - ci\_type: "String",
-    - urgency: "Integer",
-    - short\_description: "String",
-    - number: "String",
-    - comments: "String",
-    - sys\_id: "String",
-    - state: "String",
-    - assignment\_group: "String",
-    - created\_by: "String",
+    - ***ci\_name***: "String",
+    - ***ci\_type***: "String",
+    - ***urgency***: "Integer",
+    - ***short\_description***: "String",
+    - ***number***: "String",
+    - ***comments***: "String",
+    - ***sys\_id***: "String",
+    - ***state***: "String",
+    - ***assignment\_group***: "String",
+    - ***created\_by***: "String",
   - Click `Add`.
+  - ***NOTE***: The object's attributes match the ***Incident***'s attributes, they may be changed, but then the `create.rb` method should be updated accordingly.
+  
 
 ### Importing the dialogs for the ServiceNow datastore methods
 
@@ -102,12 +103,13 @@ to match an existing, running Servicenow Instance.
   - Check `Display on Button`.
   - Select an `Icon` and `Icon Color`.
   - Under `Dialog` select "Create Context Specific Snow Incident".
+  - ***NOTE***: Make sure `Open Url` is ***unchecked***.
 
   - Under the `Advanced` tab, under `Object Details` enter the following values:
-    - System/Process: "Request",
-    - Message: "create",
-    - Request: "Call\_Instance",
-    - Under `Attribute/Value Pairs`, add the pair: "action": "create".
+    - ***System/Process***: "Request",
+    - ***Message***: "create",
+    - ***Request***: "Call\_Instance",
+    - Under `Attribute/Value Pairs`, add the pair: ***action***: "create".
 
   - Click `Add`.
 
@@ -136,7 +138,7 @@ to match an existing, running Servicenow Instance.
       - Under `Catalog` select `My Company/Servicenow`.
       - Under `Dialog` select `Create Generic Snow Incident`.
       - Under `Provisioning Entry Point` select `/ServiceNow/Integration/ServiceNow/CMDB/create_generic_incident` (check `Include Domain prefix in path`).
-      - Under `Retirement Entry Point` select `/ManageIQ/Service/Retirement/StateMachines/ServiceRetirement/Default` (check `Include Domain prefix in path`).
+      - Under `Retirement Entry Point` select `/ServiceNow/Service/Retirement/StateMachines/ServiceRetirement/Default` (check `Include Domain prefix in path`).
     - Do the following in the `Details` section:
       - Under `Long Description` type "Use this catalog item to create servicenowincident. Select the appropriate CI type and enter descriptions appropriately.".
     - Click `Add`.
@@ -154,7 +156,30 @@ to match an existing, running Servicenow Instance.
       - Under `Catalog` select `My Company/Servicenow`.
       - Under `Dialog` select `View and Update Servicenow Incidents`.
       - Under `Provisioning Entry Point` select `/ServiceNow/Integration/ServiceNow/CMDB/update_servicenow_incident` (check `Include Domain prefix in path`).
-      - Under `Retirement Entry Point` select `/ManageIQ/Service/Retirement/StateMachines/ServiceRetirement/Default` (check `Include Domain prefix in path`).
+      - Under `Retirement Entry Point` select `/ServiceNow/Service/Retirement/StateMachines/ServiceRetirement/Default` (check `Include Domain prefix in path`).
     - Do the following in the `Details` section:
       - Under `Long Description` type "Use this catalog item to view and update servicenow incident. On Selecting the incident, the latest details from servicenow will be pulled. Update the required details and submit.".
     - Click `Add`.
+
+### Using ServiceNow Catalog Items and Buttons
+
+#### Creating Generic Incidents and updating their urgencies from Catalog Items
+
+- Navigate to `Services -> Catalogs`.
+
+- Under `Service Catalogs` select the desired Catalog Item and click `Order`.
+  - Fill the dialog and click `Commit`.
+
+#### Creating Context Specific Incidents with a button.
+
+- Navigate to the Object Type on which the button has been created (Example for ***Provider*** object type: `Compute -> Physical Infrastructure -> Providers`, and select the provider)
+
+- When in the Object Type's section, the `Servicenow` button group should be visible:
+  - Select it and select the `Create Incident` button.
+  - Fill the dialog and click `Commit`.
+
+#### Viewing the Created Incidents as Generic Objects
+
+- Navigate to `Automation -> Embedded Automate -> Generic Objects`.
+- Under `Generic Object Definitions` select the `Servicenow_Incident`.
+- Under `Relationships` the number of instances should be visible, clicking on that number should display them.

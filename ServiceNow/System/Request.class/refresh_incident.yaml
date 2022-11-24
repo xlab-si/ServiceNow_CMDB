@@ -1,0 +1,13 @@
+---
+object_type: instance
+version: 1.0
+object:
+  attributes:
+    display_name: 
+    name: Refresh_Incident
+    inherits: 
+    description: "/${/#namespace}/${/#class}/${/#instance}"
+    relative_path: System/Request/Refresh_Incident
+  fields:
+  - rel2:
+      value: "/ServiceNow/Integration/ServiceNow/CMDB/refresh_incident_details"

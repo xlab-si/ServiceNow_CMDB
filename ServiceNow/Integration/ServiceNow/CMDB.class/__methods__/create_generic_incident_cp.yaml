@@ -1,0 +1,13 @@
+---
+object_type: method
+version: 1.0
+object:
+  attributes:
+    name: create_generic_incident_cp
+    display_name: 
+    description: 
+    scope: instance
+    language: ruby
+    location: inline
+    relative_path: Integration/ServiceNow/CMDB/create_generic_incident_cp
+  inputs: []
