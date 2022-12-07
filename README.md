@@ -8,16 +8,17 @@ Integration of ServiceNow’s CMDB management with ManageIQ
 2. [Importing ServiceNow datastore to ManageIQ](#importing-servicenow-datastore-to-manageiq)
 3. [Modifying the imported domains Instance values](#modifying-the-imported-domains-instance-values)
 4. [Creating Servicenow Incident Generic Object](#creating-servicenow-incident-generic-object)
-5. [Creating Add ServiceNow Incident Button](#creating-add-servicenow-incident-button)
-6. [Creating Servicenow catalog](#creating-servicenow-catalog)
-7. [Creating ServiceNow Create Incident Service Catalog Item](#creating-servicenow-create-incident-service-catalog-item)
-8. [Creating ServiceNow View and Update Incidents Service Catalog Item](#creating-servicenow-view-and-update-incidents-service-catalog-item)
-9. [Using ServiceNow Catalog Items and Buttons](#using-servicenow-catalog-items-and-buttons)
+5. [Importing the dialogs for the ServiceNow datastore methods](#importing-the-dialogs-for-the-servicenow-datastore-methods)
+6. [Creating Add ServiceNow Incident Button](#creating-add-servicenow-incident-button)
+7. [Creating Servicenow catalog](#creating-servicenow-catalog)
+8. [Creating ServiceNow Create Incident Service Catalog Item](#creating-servicenow-create-incident-service-catalog-item)
+9. [Creating ServiceNow View and Update Incidents Service Catalog Item](#creating-servicenow-view-and-update-incidents-service-catalog-item)
+10. [Using ServiceNow Catalog Items and Buttons](#using-servicenow-catalog-items-and-buttons)
 
 ## Prerequisites
 
 - Clone the repository and zip the `ServiceNow` directoriy.
-- Download the dialogs yaml file from [ServiceNow_Dialogs](https://github.com/xlab-si/ServiceNow_Dialogs).
+- Download the [dialogs](https://github.com/xlab-si/ServiceNow_Dialogs/blob/main/ServiceNow_Dialogs.yml) yaml file from [ServiceNow_Dialogs](https://github.com/xlab-si/ServiceNow_Dialogs).
 - Make sure you have a running instance of ManageIQ (the steps in this document are performed in ManageIQ's UI).
 - Make sure you have a running Servicenow Instance and the required credentials.
 
@@ -81,7 +82,7 @@ to match an existing, running Servicenow Instance.
 
 - Navigate to `Automation -> Embedded Automate -> Customization`.
 
-- Under `Import`, select the dialogs yaml file and click `Upload`:
+- Under `Import`, select the [dialogs](https://github.com/xlab-si/ServiceNow_Dialogs/blob/main/ServiceNow_Dialogs.yml) yaml file and click `Upload`:
 
   - Under `Import Service Dialogs`, check all the dialogs and click `Commit`.
 
