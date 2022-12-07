@@ -51,10 +51,12 @@ to match an existing, running Servicenow Instance.
     - Replace `(snow_user)` and `(snow_password)` values with your Servicenow's user and password.
     - Replace `(proxy_url)` with your instance's proxy url, or leave blank if there is none.
 
-  > **NOTE** values are used in `"https://#{snow_server}/api/now/table/#{table_name}"`, so make sure to leave
-  out the https:// and any endpoints from the `(snow_server)` value.
 
-  > **NOTE** make sure to select automate instances, as there should be an automate instance and an automate method with the same name.
+  > **NOTE** 
+  > 1. values are used in `"https://#{snow_server}/api/now/table/#{table_name}"`, so make sure to leave
+  out the https:// and any endpoints from the `(snow_server)` value.
+  >
+  > 2. make sure to select automate instances, as there should be an automate instance and an automate method with the same name.
 
 ### Creating ServiceNow Incident Generic Object
 
@@ -75,7 +77,9 @@ to match an existing, running Servicenow Instance.
     - ***assignment\_group***: "String",
     - ***created\_by***: "String",
   - Click `Add`.
-  > ***NOTE***: The object's attributes match the ***Incident***'s attributes, they may be changed, but then the `create.rb` method should be updated accordingly.
+  > ***NOTE***
+  > 
+  > The object's attributes match the ***Incident***'s attributes, they may be changed, but then the `create.rb` method should    be updated accordingly.
   
 
 ### Importing the dialogs for the ServiceNow datastore methods
@@ -113,7 +117,8 @@ to match an existing, running Servicenow Instance.
     - Under `Attribute/Value Pairs`, add the pair: ***action***: "create".
 
   - Click `Add`.
-
+  > ***NOTE***
+  >
   > When creating the button, you may specify expressions that define where the button is enabled or visible.
   >
   > Example - creating a button on a Physical Server with name `physical-server-1`:
