@@ -114,6 +114,15 @@ to match an existing, running Servicenow Instance.
 
   - Click `Add`.
 
+  > When creating the button, you may specify expressions that define where the button is enabled or visible.
+  >
+  > Example - creating a button on a Physical Server with name `physical-server-1`:
+  >  * During the button creation under the `Advanced` tab:
+  >    * Under `Visibility / Edit Selected Element` select `Field`.
+  >    * Another dropdown should appear, select `Physical Server:Name`.
+  >    * Another dropdown and text box should appear; In dropdown, select `REGULAR EXPRESSION MATCHES`, and in text box insert `physical-server-1`.
+  >    * Click `Commit`.
+
 ### Creating ServiceNow catalog
 
 - Navigate to `Services -> Catalogs`.
