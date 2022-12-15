@@ -16,7 +16,7 @@ log(:info, $evm.root['vmdb_object_type'])
 log(:info, "--------------------****-------------")
 
 obj_type = $evm.root['vmdb_object_type']
-obj_name = $evm.root[obj_type]
+obj_name = $evm.root[obj_type].name
 
 log(:info, "--------------------*^^^^^***-------------#{obj_name}")
 
